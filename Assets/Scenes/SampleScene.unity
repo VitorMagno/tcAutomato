@@ -694,7 +694,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 759036198}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1254584119}
+        m_TargetAssemblyTypeName: Controle, Assembly-CSharp
+        m_MethodName: BotaoLuz2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &759036198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1544,7 +1556,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1662870045}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1254584119}
+        m_TargetAssemblyTypeName: Controle, Assembly-CSharp
+        m_MethodName: BotaoLuz3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1662870045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1734,7 +1758,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1900070318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1254584119}
+        m_TargetAssemblyTypeName: Controle, Assembly-CSharp
+        m_MethodName: BotaoLuz1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1900070318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2083,11 +2119,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2087527755279543588, guid: 3ca84c87a58a623428e2f0720a10f5aa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3282234527087261831, guid: 3ca84c87a58a623428e2f0720a10f5aa, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7325405691732713470, guid: 3ca84c87a58a623428e2f0720a10f5aa, type: 3}
       propertyPath: m_RootOrder

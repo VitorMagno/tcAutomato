@@ -16,23 +16,17 @@ public class Casa : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) Interruptor(0);
-        if (Input.GetKeyDown(KeyCode.Alpha2)) Interruptor(1);
-        if (Input.GetKeyDown(KeyCode.Alpha3)) Interruptor(2);
-        if (Input.GetKeyDown(KeyCode.Alpha4)) ArCondicionado();
-    }
-
-    public void Interruptor(int i)
+    public bool Interruptor(int i)
     {
         audioSource.PlayOneShot(lightSwitch);
         luzes[i].enabled = !luzes[i].enabled;
+        return luzes[i].enabled;
     }
 
-    public void ArCondicionado()
+    public bool ArCondicionado()
     {
         audioSource.PlayOneShot(ACbeep);
         arCondicionado.SetActive(!arCondicionado.activeSelf);
+        return arCondicionado.activeSelf;
     }
 }
