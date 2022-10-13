@@ -5,33 +5,34 @@ using UnityEngine.UI;
 
 public class Controle : MonoBehaviour
 {
+    [SerializeField] Image[] indicators;
     [SerializeField] Image ledDeComando;
     [SerializeField] Material[] ledTextures;
     [SerializeField] Casa casa;
-    bool luz1;
+    List<int> historico = new List<int>();  
 
-    public void BotaoAC()
+    private void Update()
     {
-        PiscarLed();
-        casa.ArCondicionado();
+        if (!(casa.luzes[0].enabled || casa.luzes[1].enabled || casa.luzes[2].enabled || casa.arCondicionado.activeSelf))
+        {
+            AcenderIndicador(4);
+        }
     }
 
-    public void BotaoLuz1()
+    
+    public void Botao(int i)
     {
         PiscarLed();
-        casa.Interruptor(0);
-    }
-
-    public void BotaoLuz2()
-    {
-        PiscarLed();
-        casa.Interruptor(1);
-    }
-
-    public void BotaoLuz3()
-    {
-        PiscarLed();
-        casa.Interruptor(2);
+        if (casa.Interruptor(i))
+        {
+            AcenderIndicador(i);
+            historico.Add(i);
+        }
+        else if (historico.Count > 1)
+        {
+            historico.RemoveAt(historico.Count - 1);
+            AcenderIndicador(historico[historico.Count - 1]);
+        }
     }
 
 
@@ -44,5 +45,18 @@ public class Controle : MonoBehaviour
     void ApagarLed()
     {
         ledDeComando.material = ledTextures[0];
+    }
+    void AcenderIndicador(int i)
+    {
+        for (int x = 0; x < indicators.Length; x++)
+        {
+            bool ison = x == i ? true : false;
+            ChangeColor(ison, x);
+        }
+    }
+    void ChangeColor(bool isOn, int i)
+    {
+        indicators[i].material = isOn ? ledTextures[1] : ledTextures[0];
+
     }
 }

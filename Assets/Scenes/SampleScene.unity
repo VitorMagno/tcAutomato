@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &2585039 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2880004692079319571, guid: 6c82dc384cb8d324ca211a192d338b3b, type: 3}
+  m_PrefabInstance: {fileID: 1810907717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &44686114 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2880004692079319571, guid: 6c82dc384cb8d324ca211a192d338b3b, type: 3}
+  m_PrefabInstance: {fileID: 1475508012}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &222896606
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +501,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2943448537794411399, guid: 6c82dc384cb8d324ca211a192d338b3b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4131124213467376544, guid: 6c82dc384cb8d324ca211a192d338b3b, type: 3}
       propertyPath: m_Name
       value: S
@@ -807,6 +833,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6499303113393594468, guid: da2cb436bb214ac49a58445709d915e1, type: 3}
   m_PrefabInstance: {fileID: 482366836}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &486706360 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2880004692079319571, guid: 6c82dc384cb8d324ca211a192d338b3b, type: 3}
+  m_PrefabInstance: {fileID: 924855387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &538878511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,12 +1266,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1254584119}
         m_TargetAssemblyTypeName: Controle, Assembly-CSharp
-        m_MethodName: BotaoAC
-        m_Mode: 1
+        m_MethodName: Botao
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1363,12 +1400,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1254584119}
         m_TargetAssemblyTypeName: Controle, Assembly-CSharp
-        m_MethodName: BotaoLuz2
-        m_Mode: 1
+        m_MethodName: Botao
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2795,6 +2832,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6e1b09b2e7a78409287c2ef6b2b179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indicators:
+  - {fileID: 1475078043}
+  - {fileID: 44686114}
+  - {fileID: 486706360}
+  - {fileID: 2585039}
+  - {fileID: 1617327031}
   ledDeComando: {fileID: 1056737647}
   ledTextures:
   - {fileID: 2100000, guid: 8f795eeeb2989854cae746ac854e6e3e, type: 2}
@@ -3020,6 +3063,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1475078043 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2880004692079319571, guid: 6c82dc384cb8d324ca211a192d338b3b, type: 3}
+  m_PrefabInstance: {fileID: 1312630723}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1475508012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3273,6 +3327,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584967774}
   m_CullTransparentMesh: 1
+--- !u!114 &1617327031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2880004692079319571, guid: 6c82dc384cb8d324ca211a192d338b3b, type: 3}
+  m_PrefabInstance: {fileID: 297927778}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1662870042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3359,12 +3424,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1254584119}
         m_TargetAssemblyTypeName: Controle, Assembly-CSharp
-        m_MethodName: BotaoLuz3
-        m_Mode: 1
+        m_MethodName: Botao
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4057,8 +4122,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1254584119}
         m_TargetAssemblyTypeName: Controle, Assembly-CSharp
-        m_MethodName: BotaoLuz1
-        m_Mode: 1
+        m_MethodName: Botao
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

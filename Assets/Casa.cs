@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Casa : MonoBehaviour
 {
-    [SerializeField] Light[] luzes;
-    [SerializeField] GameObject arCondicionado;
+    [SerializeField] public Light[] luzes;
+    [SerializeField] public GameObject arCondicionado;
 
     AudioSource audioSource;
     [SerializeField] AudioClip ACbeep;
@@ -18,15 +18,15 @@ public class Casa : MonoBehaviour
 
     public bool Interruptor(int i)
     {
+        if (i == 3)
+        {
+            audioSource.PlayOneShot(ACbeep);
+            arCondicionado.SetActive(!arCondicionado.activeSelf);
+            return arCondicionado.activeSelf;
+        }
         audioSource.PlayOneShot(lightSwitch);
         luzes[i].enabled = !luzes[i].enabled;
         return luzes[i].enabled;
     }
 
-    public bool ArCondicionado()
-    {
-        audioSource.PlayOneShot(ACbeep);
-        arCondicionado.SetActive(!arCondicionado.activeSelf);
-        return arCondicionado.activeSelf;
-    }
 }
