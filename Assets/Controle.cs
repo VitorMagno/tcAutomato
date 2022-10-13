@@ -12,22 +12,26 @@ public class Controle : MonoBehaviour
 
     public void BotaoAC()
     {
-        
+        PiscarLed();
+        casa.ArCondicionado();
     }
 
     public void BotaoLuz1()
     {
-        
+        PiscarLed();
+        casa.Interruptor(0);
     }
 
     public void BotaoLuz2()
     {
-        
+        PiscarLed();
+        casa.Interruptor(1);
     }
 
     public void BotaoLuz3()
     {
-
+        PiscarLed();
+        casa.Interruptor(2);
     }
 
 
