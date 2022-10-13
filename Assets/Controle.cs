@@ -9,13 +9,26 @@ public class Controle : MonoBehaviour
     [SerializeField] Image ledDeComando;
     [SerializeField] Material[] ledTextures;
     [SerializeField] Casa casa;
-    List<int> historico = new List<int>();  
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (!(casa.luzes[0].enabled || casa.luzes[1].enabled || casa.luzes[2].enabled || casa.arCondicionado.activeSelf))
+        int amount = -1;
+        foreach (Light luz in casa.luzes)
+        {
+            if (luz.enabled) amount += 1;
+        }
+
+        if (casa.arCondicionado.activeSelf)
+        {
+            AcenderIndicador(3);
+        }
+        else if (!(casa.luzes[0].enabled || casa.luzes[1].enabled || casa.luzes[2].enabled || casa.arCondicionado.activeSelf))
         {
             AcenderIndicador(4);
+        } 
+        else
+        {
+            AcenderIndicador(amount);
         }
     }
 
@@ -23,16 +36,7 @@ public class Controle : MonoBehaviour
     public void Botao(int i)
     {
         PiscarLed();
-        if (casa.Interruptor(i))
-        {
-            AcenderIndicador(i);
-            historico.Add(i);
-        }
-        else if (historico.Count > 1)
-        {
-            historico.RemoveAt(historico.Count - 1);
-            AcenderIndicador(historico[historico.Count - 1]);
-        }
+        casa.Interruptor(i);
     }
 
 
